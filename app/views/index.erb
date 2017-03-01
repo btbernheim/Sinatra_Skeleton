@@ -1,0 +1,10 @@
+<% if @session == nil %>
+	<h1>Welcome</h1>
+	<a href="/sessions/new">Login</a>
+<% else @session != nil %>
+	<h1>Welcome Back</h1>
+	<a href="/users/<%= @session %>">View your profile</a>
+<% end %>
+
+<br>
+<p>Stuff about your profile.</p>
